@@ -42,7 +42,6 @@ INSTALLED_APPS = [
 ]
 
 
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -58,6 +57,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+
         'DIRS': [os.path.join(SETTINGS_PATH, 'templates'),
                  os.path.join(BASE_DIR, 'polls.apps.PollsConfig',
                               'templates', 'polls.apps.PollsConfig'),
