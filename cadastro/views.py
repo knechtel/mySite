@@ -13,7 +13,7 @@ def index(request):
     return render(request, 'cadastro/index.html')
 
 
-def client(request):
+def getAllClient(request):
     clients = Client.objects.all()
     clientSerializer = ClientSerializer(many=True)
     clientList = clientSerializer.to_representation(clients)
