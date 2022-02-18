@@ -1,3 +1,4 @@
+from dataclasses import fields
 from django.db import models
 from djmoney.models.fields import MoneyField
 # Create your models here.
@@ -8,6 +9,9 @@ class Client(models.Model):
     name = models.CharField(max_length=200)
     email = models.CharField(max_length=200)
     cpf = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name
 
 
 class Aparelho(models.Model):
